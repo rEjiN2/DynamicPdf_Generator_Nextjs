@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+  <style>
+    body {
+      margin-top: 5rem;
+    }
+
+   .invoice{
+    width: 600px;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border: 1px solid #eee;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+      font-size: 16px;
+      /* line-height: 24px; */
+      font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+      color: #555;
+    display: flex;
+   flex-direction: column;
+   }
+
+   .top{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+   .from{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 0.5rem;
+   }
+   .to{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-left: 0.5rem;
+   }
+   .inv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+   }
+   h5, h6 {
+      margin: 0;
+      padding: 0;
+    }
+    .item{
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .total{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 2rem;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="invoice">
+    <div class="top" >
+      <div>
+        <img src="https://media.istockphoto.com/id/1137971264/vector/airplane-fly-out-logo-plane-taking-off-stylized-sign.jpg?s=612x612&w=0&k=20&c=TH1vDs4wmGnfWapq_e1XYxqzQV_qxaF4_aJWoDJyKNI=" width="100px" height="100px" alt="Invoice">
+      </div>
+      <div class="inv">
+        <h5>Invoice Number : 719832</h5>
+        <h5>Date : 09-25-2023</h5>
+        <h5>email:tendac@gmail.com</h5>
+      </div>
+    </div>
+    <div class="from">
+      <h5>From</h5>
+      <h6>Rejin A</h6>
+      <h6>Tendac Construction Ltd</h6>
+    </div>
+    <div class="to">
+      <h5>To</h5>
+      <h6>{{customerName}}</h6>
+      <h6>Mosan Construction Ltd</h6>
+      <h6>{{customerEmail}}</h6>
+    </div>
+    <div class="item">
+      <table style="border: 1px solid #555;">
+        <thead>
+          <tr>
+            <th style="width: 200px; border: 1px solid #555;">Item</th>
+            <th style="width: 200px; border: 1px solid #555;">Quantity</th>
+            <th style="width: 200px; border: 1px solid #555;">Total Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td align="center" style="border: 1px solid #555;">Shuttering Sheet</td>
+            <td align="center" style="border: 1px solid #555;">5</td>
+            <td align="center" style="border: 1px solid #555;">₹{{totalAmount}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="total">
+      <h4>Total Amount </h4>
+      <h4>₹{{totalAmount}}</h4>
+    </div>
+
+    <hr>
+<h5 align="center" style="margin-top: 5rem;">Thankyou</h5>
+
+  </div>
+</body>
+
+</html>

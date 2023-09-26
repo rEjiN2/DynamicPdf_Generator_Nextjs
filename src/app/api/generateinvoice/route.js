@@ -29,9 +29,6 @@ export const POST =  async (request, res) => {
     const pdf = await page.pdf({ format: 'A4' });
     await browser.close();
 
-    
-    // res.statusCode = 200;
-    // res.send(pdf);
     return new NextResponse(pdf, { status: 200, headers: { "Content-Type": "application/json" } });
   } catch (err) {
     console.log(err);
